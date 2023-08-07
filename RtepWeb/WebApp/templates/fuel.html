@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RTEP System</title>
+    <script src="https://kit.fontawesome.com/abe6c69d0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #f1f1f1;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .navbar a.active {
+            color: white;
+        }
+
+        .navbar a:hover {
+            color: orangered;
+        }
+
+        .services {
+            padding: 30px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .services h2 {
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            border-radius: 70px;
+        }
+
+        .services-box {
+            width: 50%;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-box i {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .services-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .services-box p {
+            font-size: 13px;
+            line-height: 1.0;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .services-box .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: green;
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .services-box .btn:hover {
+            background-color: green;
+        }
+
+        .contact {
+            background-color: #f2f2f2;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact h2 span {
+            color: black;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            justify-content: space-between;
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .contact .input-box {
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            flex-direction: column;
+            background-color: #f2f2f2;
+            padding: 5px;
+        }
+
+        .contact .input-box input,
+        .contact textarea {
+            padding: 15px;
+            border-radius: 20px;
+            width: 100%;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            outline: none;
+            background-color: #f2f2f2;
+            box-sizing: border-box;
+        }
+
+        .contact textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .contact .btn:hover {
+            background-color: green;
+        }
+
+        .footer {
+            background-color: gray;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+
+        .footer p {
+            margin: 10px 20px;
+            font-size: 10px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 25px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .services-box {
+                width: 100%;
+                margin: 10px;
+                max-width: none;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-icon {
+                display: block;
+                position: relative;
+                padding-right: 420px;
+                size: 40%;
+            }
+
+            .navbar {
+                margin-top: 20px;
+                display: none;
+            }
+
+            .navbar.active {
+                display: contents;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1200px) {
+            .services-box {
+                width: calc(50% - 40px);
+                max-width: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Uasin_Gishu_County_Government_logo.png"
+                alt="Logo">
+            UASIN GISHU COUNTY GOVERNMENT
+        </h2>
+        <div class="menu-icon">
+            <i class='fas fa-bars'></i>
+        </div>
+        <nav class="navbar">
+            <a href="" class="active">Home</a>
+            <a href="" class="active">About</a>
+            <a href="" class="active">Services</a>
+            <a href="" class="active">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="services" id="services">
+        <h2 class="heading">Fuel <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-gas-pump"></i>
+                <h3>Order Fuel</h3>
+                <p>Access fuel order services</p>
+                <a href="{% url 'order_detail'%}" class="btn">Access</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-gas-pump"></i>
+                <h3>Station Refill</h3>
+                <p>Refill Station</p>
+                <a href="{% url 'fuel-refill' %}" class="btn">Refill</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2023 Uasin Gishu County Government. All rights reserved.</p>
+    </footer>
+    
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

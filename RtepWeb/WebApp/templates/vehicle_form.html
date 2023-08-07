@@ -1,0 +1,13 @@
+{% extends 'bass.html' %}
+
+{% block content %}
+<div class="logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Uasin_Gishu_County_Government_logo.png" alt="">
+</div>
+<h2>Register Vehicle</h2>
+  <form action="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="padding: 10px; width: 60%; border-radius: 20px; background-color: green; color: white;">Register</button>
+  </form>
+{% endblock %}

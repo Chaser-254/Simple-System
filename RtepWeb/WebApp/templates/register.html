@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 100px;
+        }
+
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            border: 2px solid whitesmoke;
+            border-radius: 20px;
+            color: whitesmoke;
+            font-size: larger;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding: 5px;
+            background-color: green;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: bolder;
+            color: whitesmoke;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+        .register-link{
+            text-align: center;
+            color: white;
+        }
+        .register-link a{
+            text-decoration: none;
+            color: yellow;
+        }
+        .register-link a:hover{
+            text-decoration: underline;
+        }
+        .footer{
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+            padding: 5px;
+            background-color: green;
+            border-radius: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Uasin_Gishu_County_Government_logo.png" alt="">
+            </div>
+        <h2>Sign Up</h2>
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error-message">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="public_service_no">Public Service No:</label>
+            <input type="text" id="public_service_no", name="public_service_no" required>
+            <label for="Full_names">Full Names:</label>
+            <input type="text" id="Full_names" name="Full_names"required>
+            <label for="Department">Department:</label>
+            <input type="text" id="Department" name="Department" required>
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Sign Up">
+        </form>
+        <p class="register-link">Don't have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+    <div class="footer">
+        &copy; 2023 UASIN GISHU COUNTY GOVERNMENT.
+    </div>
+</body>
+</html>

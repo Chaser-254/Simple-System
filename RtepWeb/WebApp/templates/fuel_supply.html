@@ -1,0 +1,9 @@
+{% extends 'bass.html' %}
+ {% block content %}
+    <h2>Fuel Suppliers</h2>
+    <form action="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="border-radius: 20px; width: 50%; padding: 8px; background-color: green; color: white;">submit</button>
+    </form>
+ {% endblock  %}

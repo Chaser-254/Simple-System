@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uasin Gishu County Government</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: black;
+                margin-top: 100px;
+            }
+            .logo {
+              text-align: center;
+              margin-bottom: 20px;
+          }
+          .logo img {
+              width: 100px;
+          }
+    
+    
+            .container {
+                max-width: 300px;
+                margin: 0 auto;
+                padding: 40px;
+                background-color: black;
+                border-radius: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: whitesmoke;
+                font-size: medium;
+                border: 2px solid white;
+                border-radius: 20px;
+                padding: 4px;
+                background-color: #45a049;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 10px;
+                color: white;
+            }
+    
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-sizing: border-box;
+            }
+    
+            input[type="submit"] {
+                width: 50%;
+                padding: 5px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+    
+            input[type="submit"]:hover {
+                background-color: green;
+                margin-top: 30px;
+                padding: 10px;
+            }
+    
+            .error-message {
+                color: #ff0000;
+                margin-top: 10px;
+            }
+            .register-link{
+                text-align: center;
+                color: white;
+            }
+            .register-link p{
+              color: whitesmoke;
+            }
+            .register-link a{
+                text-decoration: none;
+                color: green;
+                font-size: 13px;
+            }
+            .register-link a:hover{
+                text-decoration: underline;
+            }
+            .reset-link {
+                text-align: center;
+                color: white;
+            }
+            .reset-link a {
+                text-decoration: none;
+                color: yellow;
+                font-size: 13px;
+            }
+            .reset-link a:hover {
+                text-decoration: underline;
+            }
+            @media only screen and (max-width: 480px) {
+                .container {
+                  padding: 10px;
+                }
+              
+                .logo {
+                  margin-bottom: 10px;
+                }
+              
+                h2 {
+                  font-size: 18px;
+                }
+              
+                .form-group {
+                  margin-bottom: 10px;
+                }
+              }
+            </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
